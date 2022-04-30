@@ -12,7 +12,7 @@ then
 fi
 
 xhost +local:root;
-docker run -it \
+docker run -it --rm \
     --gpus all \
     --net host --privileged \
     -v $HOME:/shared -e \

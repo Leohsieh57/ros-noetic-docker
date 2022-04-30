@@ -12,7 +12,8 @@ then
 fi
 
 xhost +local:root;
-nvidia-docker run \
+docker run -it \
+    --gpus all \
     --net host --privileged \
     -v $HOME:/shared -e \
     DISPLAY=$DISPLAY -e \
@@ -20,7 +21,7 @@ nvidia-docker run \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
     -v $HOME/ros_noetic_docker/catkin_ws:/catkin_ws:rw \
     -v $HOME/ros_noetic_docker/data:/data:ro \
-    -it ros_noetic_docker
+    ros_noetic_docker 
 
     
 echo "exiting docker"

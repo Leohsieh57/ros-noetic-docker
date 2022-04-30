@@ -1,0 +1,14 @@
+https://github.com/jlblancoc/nanoflann.git
+c52ae8d1ac7836385ac54460be64ba39f258e64c
+
+https://github.com/ceres-solver/ceres-solver.git
+f1414cb5bd3fafb54cc4f5bc2d4d4df5f4149ccc
+
+https://github.com/RainerKuemmerle/g2o.git
+b1ba729aa569267e179fa2e237db0b3ad5169e2e
+    
+https://github.com/strasdat/Sophus.git
+4ac843dd9050a5d175e5c0a857da9315fbc436f0
+    
+https://github.com/stevenlovegrove/Pangolin.git
+d64507241dc79ecd98c1dea267d74dac34663629

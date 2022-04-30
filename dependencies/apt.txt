@@ -1,0 +1,6 @@
+nvidia-driver-510
+libgoogle-glog-dev
+python3-pip
+git
+libatlas-base-dev
+libsuitesparse-dev

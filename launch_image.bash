@@ -19,9 +19,9 @@ docker run -it \
     DISPLAY=$DISPLAY -e \
     LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
-    -v $HOME/ros_noetic_docker/catkin_ws:/catkin_ws:rw \
+    -v $HOME/ros_noetic_docker/catkin_ws:/home/user/catkin_ws:rw \
     -v $HOME/ros_noetic_docker/data:/data:ro \
-    ros_noetic_docker 
+    ros_noetic_docker
 
     
 echo "exiting docker"

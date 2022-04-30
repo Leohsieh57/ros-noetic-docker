@@ -16,14 +16,16 @@ RUN sudo apt -y install git
 RUN sudo apt -y install libatlas-base-dev
 RUN sudo apt -y install libsuitesparse-dev
 
-RUN pip3 install pandas
 #RUN pip3 install torch
 #RUN pip3 install torchvision
+RUN pip3 install pandas
+RUN pip3 install opencv-python
 
-WORKDIR /catkin_ws
-COPY . . 
-
+COPY . .
 RUN python3 install_thirdparty.py
 
-RUN mkdir fbow-arm64/build && cd fbow-arm64/build && cmake ..
-RUN cd fbow-arm64/build && sudo make install -j24
+ENV USER_NAME=user
+RUN useradd -ms /bin/bash $USER_NAME
+USER $USER_NAME
+WORKDIR /home/$USER_NAME
+COPY setup.bash /home/$USER_NAME/setup.bash

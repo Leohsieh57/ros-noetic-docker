@@ -21,7 +21,8 @@ docker run -it \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
     -v $HOME/ros_noetic_docker/catkin_ws:/home/user/catkin_ws:rw \
     -v $HOME/ros_noetic_docker/data:/data:ro \
-    ros_noetic_docker
+    -v $HOME/.ros-noetic-docker-bash-history:/home/user/.bash_history:rw \
+    ros_noetic_docker /bin/bash
 
     
 echo "exiting docker"

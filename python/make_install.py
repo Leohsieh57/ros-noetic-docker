@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import os
 import glob
-import pandas as pd
 from utils.pkg_repo import PackageRepository
 from utils.utils import *
 

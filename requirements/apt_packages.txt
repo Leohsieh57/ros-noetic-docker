@@ -1,4 +1,4 @@
-nvidia-driver-510
+#nvidia-driver-510
 libgoogle-glog-dev
 python3-pip
 git

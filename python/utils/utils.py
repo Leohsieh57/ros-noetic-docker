@@ -3,7 +3,7 @@ import os
 
 def get_lines(filename:str, min_len:int=0): 
     lines = open(filename).readlines()
-    lines = [line for line in lines if len(line) > min_len]
+    lines = [line for line in lines if len(line) > min_len and line[0] != '#']
     for i, line in enumerate(lines): 
         lines[i] = line[:-1] if line[-1] == '\n' else line
 

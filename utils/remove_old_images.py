@@ -12,4 +12,4 @@ if __name__ == "__main__":
         assert len(image_id) == 12
         os.system("docker image rm -f %s"%image_id)
 
-    os.system("docker images -a")
+    os.system("docker images")

@@ -39,7 +39,7 @@ THE SOFTWARE.
 #include <opencv2/xfeatures2d.hpp>
 #endif
 
-cv::Mat loadFeatures(const std::string& path_to_image, std::string descriptor = "orb") {
+cv::Mat loadFeatures(const std::string &path_to_image, std::string descriptor = "orb") {
     cv::Ptr<cv::Feature2D> feat_detector;
     if (descriptor == "orb") feat_detector = cv::ORB::create(2000);
     else if (descriptor == "brisk") feat_detector = cv::BRISK::create();

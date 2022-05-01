@@ -32,6 +32,7 @@ THE SOFTWARE.
 class CmdLineParser {
     int argc;
     char** argv;
+    
 public:
     CmdLineParser(int _argc, char** _argv) : argc(_argc), argv(_argv) {}
     bool operator[](const std::string& param) {

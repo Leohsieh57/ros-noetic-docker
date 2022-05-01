@@ -277,7 +277,6 @@ set(CMAKE_EXE_LINKER_FLAGS_DEBUG ${CMAKE_EXE_LINKER_FLAGS_DEBUG} ${EXTRA_EXE_LIN
 # ------------------------------------------------------
 
 add_definitions(-DNOMINMAX)
-
 set(SOURCES
     src/fbow.cpp
     src/vocabulary_creator.cpp)

@@ -12,3 +12,7 @@ def get_lines(filename:str, min_len:int=0):
 
 def log_error(log:str): 
     os.system("echo '%s'" % "\033[91m[Docker INFO] " + log + '\033[0m')
+
+
+def is_cmake_repo(pkg_dir: str):
+    return os.path.exists(os.path.join(pkg_dir, "CMakeLists.txt"))

@@ -3,7 +3,7 @@ import os
 from utils.utils import get_lines
 
 
-def remote_install(cmd:str, filename:str)->None: 
+def remote_install(cmd:str, filename:str): 
     for dep in get_lines(os.path.join("requirements", filename)): 
         os.system("%s %s" % (cmd, dep))
 

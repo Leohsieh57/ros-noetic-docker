@@ -4,7 +4,7 @@ import pandas as pd
 from utils.utils import log_error
 
 
-
+NUM_PROC=24
 SUFFIXES = [".cpp", ".c", ".cc", ".cu", ".cuh", 
     ".h", ".hpp", ".cmake.in", "CMakeLists.txt"]
 
@@ -58,6 +58,35 @@ class PackageRepository:
                 return True
 
         return False
+
+
+    def reinstall_required(self): 
+        return self.remake
+
+
+    def git_clone(url:str, commit:str="HEAD"): 
+        pkg_name = url.split('/')[-1].split('.')[0]
+        if not os.path.exists(pkg_name): 
+            os.system("git clone %s" % url)
+        
+        os.chdir(pkg_name)
+        os.system("git fetch --all")
+        os.system("git reset --hard %s" %commit)
+        os.chdir("..")
+
+        return pkg_name
+
+
+    def make_install(self): 
+        os.chdir(self.name)
+        if os.path.exists("build"): 
+            os.system("rm -rf build/")
+
+        os.mkdir("build")
+        os.chdir("build")
+        os.system("cmake ..")
+        os.system("sudo make install -j%i" % NUM_PROC)
+        os.chdir("../..")
 
 
     def export_cache_csv(self, filenames): 

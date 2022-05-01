@@ -8,7 +8,7 @@ https://github.com/RainerKuemmerle/g2o.git
 b1ba729aa569267e179fa2e237db0b3ad5169e2e
     
 https://github.com/strasdat/Sophus.git
-d1374a9e30d1ec9d7b8295e6f14dfa4d6569337a
+4ac843dd9050a5d175e5c0a857da9315fbc436f0
     
 https://github.com/stevenlovegrove/Pangolin.git
 d64507241dc79ecd98c1dea267d74dac34663629

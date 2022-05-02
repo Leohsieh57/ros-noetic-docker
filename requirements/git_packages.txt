@@ -5,10 +5,13 @@ https://github.com/ceres-solver/ceres-solver.git
 f1414cb5bd3fafb54cc4f5bc2d4d4df5f4149ccc
 
 https://github.com/RainerKuemmerle/g2o.git
-b1ba729aa569267e179fa2e237db0b3ad5169e2e
+565d100056794eb8e3656431d7d9f59b7193beee
     
 https://github.com/strasdat/Sophus.git
 4ac843dd9050a5d175e5c0a857da9315fbc436f0
     
 https://github.com/stevenlovegrove/Pangolin.git
 d64507241dc79ecd98c1dea267d74dac34663629
+
+https://github.com/stevengj/nlopt.git
+5b82591bd526a2a100b7bb78e015b05ce3c75dc5

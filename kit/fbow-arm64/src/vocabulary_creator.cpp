@@ -35,7 +35,7 @@ inline int omp_get_thread_num(){return 0;}
 using namespace std;
 namespace fbow{
 
-void VocabularyCreator::create(fbow::Vocabulary &Voc, const  cv::Mat  &features, const std::string &desc_name, Params params)
+void VocabularyCreator::create(fbow::Vocabulary &Voc, const cv::Mat &features, const std::string &desc_name, Params params)
 {
     std::vector<cv::Mat> vfeatures(1);
     vfeatures[0]=features;
@@ -52,7 +52,7 @@ void VocabularyCreator::create(fbow::Vocabulary &Voc, const std::vector<cv::Mat>
     _descNBytes=features[0].cols* features[0].elemSize();
     _params.nthreads=std::min(maxthreads,_params.nthreads);
 
-    if(!(_descType==CV_8UC1|| _descType==CV_32FC1))
+    if(!(_descType==CV_8UC1 || _descType==CV_32FC1))
         throw std::runtime_error("Descriptors must be binary CV_8UC1 or float  CV_32FC1");
     if (_descType==CV_8UC1){
 //        if (_descNBytes==32)dist_func=distance_hamming_32bytes;

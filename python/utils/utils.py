@@ -1,4 +1,6 @@
 import os
+from datetime import datetime
+from re import S
 
 
 def get_lines(filename:str, min_len:int=0): 
@@ -11,7 +13,9 @@ def get_lines(filename:str, min_len:int=0):
 
 
 def log_error(log:str): 
-    os.system("echo '%s'" % "\033[91m[Docker INFO] " + log + '\033[0m')
+    now = str(datetime.now().time())
+    log = "\033[0;31m ---DOCKER BUILD [%s] %s\033[0m" % (now, log)
+    os.system("echo '%s'" % log)
 
 
 def is_cmake_repo(pkg_dir: str):

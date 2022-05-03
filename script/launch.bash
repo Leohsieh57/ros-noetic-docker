@@ -14,6 +14,7 @@ fi
 xhost +local:root;
 docker run -it --rm --gpus all \
     --net host --privileged \
+    --name bionic \
     -v $HOME:/shared -e \
     DISPLAY=$DISPLAY -e \
     LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH \
@@ -24,4 +25,4 @@ docker run -it --rm --gpus all \
     ros_noetic_docker /bin/bash
 
     
-echo "exiting docker"
+echo "closing ros noetic docker"

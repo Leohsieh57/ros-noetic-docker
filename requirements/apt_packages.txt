@@ -2,5 +2,5 @@ libgoogle-glog-dev
 python3-pip
 libatlas-base-dev
 libsuitesparse-dev
-libspnav-de
+libspnav-dev
 libdw-dev

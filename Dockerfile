@@ -1,6 +1,6 @@
 #pull prebuilt images
-ARG IMAGE=ros-noetic-docker
-ARG TAG=latest 
+ARG IMAGE=bardiche4768/ros-noetic-docker
+ARG TAG=latest
 
 FROM ${IMAGE}:${TAG}
 ARG FROM_CUDA=0

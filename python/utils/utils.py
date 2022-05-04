@@ -1,6 +1,5 @@
 import os
 from datetime import datetime
-from re import S
 
 
 def get_lines(filename:str, min_len:int=0): 

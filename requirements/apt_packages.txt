@@ -6,3 +6,4 @@ libspnav-dev
 libdw-dev
 libarmadillo-dev
 ros-noetic-codec-image-transport
+xboxdrv

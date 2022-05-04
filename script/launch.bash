@@ -12,18 +12,31 @@ then
 fi
 
 xhost +local:root;
+echo ""
+echo "###############################################"
+echo "#                                             #"
+echo "#          ros-noetic-docker(bionic)          #"
+echo "#                                             #"
+echo "#  enter container:                           #"
+echo "#     1. open a new terminal                  #"
+echo "#     2. run script/enter_container.bash      #"
+echo "#                                             #"
+echo "#  stop container:                            #"
+echo "#     1. ctrl+d on this terminal              #"
+echo "#                                             #"
+echo "###############################################"
+echo ""
 docker run -it --rm --gpus all \
     --net host --privileged \
     --name bionic \
     -v $HOME:/shared -e \
     DISPLAY=$DISPLAY -e \
     LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH \
-    -v /dev/bus/usb:/dev/bus/usb \
+    -v /dev:/dev \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
     -v $HOME/ros-noetic-docker/catkin_ws:/home/user/catkin_ws:rw \
     -v $HOME/ros-noetic-docker/data:/data:ro \
     -v $HOME/.ros-noetic-docker-bash-history:/home/user/.bash_history:rw \
-    ros-noetic-docker /bin/bash
+    ros-noetic-docker /bin/bash > /dev/null
 
-    
-echo "closing ros noetic docker"
+echo "ros-noetic-docker stopped"

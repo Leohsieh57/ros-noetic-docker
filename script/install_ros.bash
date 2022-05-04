@@ -21,5 +21,5 @@ then
     adduser ${USER_NAME} sudo
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 else
-    echo "[buliding from ros_noetic_docker]"
+    echo "[buliding from ros-noetic-docker]"
 fi

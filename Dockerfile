@@ -1,5 +1,5 @@
 #pull prebuilt images
-ARG IMAGE=ros_noetic_docker
+ARG IMAGE=ros-noetic-docker
 ARG TAG=latest 
 
 FROM ${IMAGE}:${TAG}

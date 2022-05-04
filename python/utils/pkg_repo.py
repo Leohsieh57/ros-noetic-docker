@@ -2,9 +2,9 @@ import os
 import glob
 import pandas as pd
 from utils.utils import log_error
+import multiprocessing as mp
 
 
-NUM_PROC=24
 SUFFIXES = [".cpp", ".c", ".cc", ".cu", ".cuh", 
     ".h", ".hpp", ".cmake.in", "CMakeLists.txt"]
 
@@ -85,7 +85,7 @@ class PackageRepository:
         os.mkdir("build")
         os.chdir("build")
         os.system("cmake ..")
-        os.system("sudo make install -j%i" % NUM_PROC)
+        os.system("sudo make install -j%i" % mp.cpu_count())
         os.chdir("../..")
 
 

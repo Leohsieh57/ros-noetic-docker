@@ -4,3 +4,4 @@ libatlas-base-dev
 libsuitesparse-dev
 libspnav-dev
 libdw-dev
+libarmadillo-dev

@@ -18,11 +18,12 @@ docker run -it --rm --gpus all \
     -v $HOME:/shared -e \
     DISPLAY=$DISPLAY -e \
     LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH \
+    -v /dev/bus/usb:/dev/bus/usb \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
-    -v $HOME/ros_noetic_docker/catkin_ws:/home/user/catkin_ws:rw \
-    -v $HOME/ros_noetic_docker/data:/data:ro \
+    -v $HOME/ros-noetic-docker/catkin_ws:/home/user/catkin_ws:rw \
+    -v $HOME/ros-noetic-docker/data:/data:ro \
     -v $HOME/.ros-noetic-docker-bash-history:/home/user/.bash_history:rw \
-    ros_noetic_docker /bin/bash
+    ros-noetic-docker /bin/bash
 
     
 echo "closing ros noetic docker"

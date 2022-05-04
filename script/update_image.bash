@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t ros_noetic_docker . --no-cache
+docker build -t ros-noetic-docker . --no-cache

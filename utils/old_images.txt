@@ -1,5 +1,3 @@
-bardiche4768/ros_noetic_docker   v1.0.0                       9087124d1f6a   30 hours ago   17GB
-ros_noetic_docker                latest                       9087124d1f6a   30 hours ago   17GB
-nvidia/cuda                      11.6.0-runtime-ubuntu20.04   92d8e3e8467a   3 days ago     2.02GB
-osrf/ros                         noetic-desktop-full          26b40b5e6a43   10 days ago    3.44GB
-busybox                          latest                       1a80408de790   2 weeks ago    1.24MB
+ros_noetic_docker    latest                     84368493280f   4 minutes ago   15.7GB
+<none>               <none>                     11e724176e8f   14 hours ago    8.64GB
+<none>               <none>                     077e436673f8   15 hours ago    4.81GB

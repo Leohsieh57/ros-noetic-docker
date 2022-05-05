@@ -1,2 +1,3 @@
-8be14dae0391   0ef7c1884d2f   "/bin/sh -c 'chmod u…"   2 hours ago   Exited (1) 2 hours ago             xenodochial_fermat
-c585a9cab6e8   559c32c1a2f0   "/bin/sh -c 'chmod u…"   2 hours ago   Exited (1) 2 hours ago             suspicious_lisko
+ca4aeba4dcde   fe466a7b3031         "/bin/sh -c 'cat ech…"   15 hours ago   Exited (1) 15 hours ago             determined_golick
+a5e10f281442   68e9e31e3685         "/bin/sh -c 'sudo to…"   15 hours ago   Exited (2) 15 hours ago             infallible_franklin
+1696e91730ff   63f77197fc38         "/bin/sh -c 'touch /…"   15 hours ago   Exited (1) 15 hours ago             romantic_kowalevski

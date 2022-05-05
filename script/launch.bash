@@ -12,20 +12,7 @@ then
 fi
 
 xhost +local:root;
-echo ""
-echo "  ###############################################"
-echo "  #                                             #"
-echo "  #          ros-noetic-docker(bionic)          #"
-echo "  #                                             #"
-echo "  #  enter container:                           #"
-echo "  #     1. open a new terminal                  #"
-echo "  #     2. run script/enter_container.bash      #"
-echo "  #                                             #"
-echo "  #  stop container:                            #"
-echo "  #     1. ctrl+d on this terminal              #"
-echo "  #                                             #"
-echo "  ###############################################"
-echo ""
+python3 python/print_pannel.py
 docker run -it --rm --gpus all \
     --net host --privileged \
     --name bionic \
@@ -39,4 +26,5 @@ docker run -it --rm --gpus all \
     -v $HOME/.ros-noetic-docker-bash-history:/home/user/.bash_history:rw \
     ros-noetic-docker /bin/bash > /dev/null
 
+clear
 echo "ros-noetic-docker stopped"

@@ -14,6 +14,7 @@ if __name__ == "__main__":
     found_container = False
     for id, image in active_containers: 
         if image == "ros-noetic-docker": 
+            os.system("clear")
             os.system("echo 'entered ros-noetic-container(%s)'" % id)
             os.system("docker exec -it %s /bin/bash"%id)
             found_container = True

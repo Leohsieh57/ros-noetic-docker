@@ -15,8 +15,6 @@ if __name__ == "__main__":
     for id, image in active_containers: 
         if image == "ros-noetic-docker": 
             os.system("echo 'entered ros-noetic-container(%s)'" % id)
-            os.system("echo ''" )
-            os.system("echo 'please run \". setup.bash\" to initialize'")
             os.system("docker exec -it %s /bin/bash"%id)
             found_container = True
             break
@@ -24,4 +22,5 @@ if __name__ == "__main__":
     if not found_container: 
         raise Exception("please run script/launch.bash first, aborting..")
     
+    os.system("echo ''" )
     os.system("echo 'leaving ros-noetic-container(%s)'" % id)

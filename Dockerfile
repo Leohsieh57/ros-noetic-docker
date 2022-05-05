@@ -1,5 +1,5 @@
 #pull prebuilt images
-ARG IMAGE=bardiche4768/ros-noetic-docker
+ARG IMAGE=ros-noetic-docker
 ARG TAG=latest
 
 FROM ${IMAGE}:${TAG}
@@ -17,5 +17,6 @@ WORKDIR /home/${USER_NAME}
 #install dependencies
 COPY . .
 COPY script/setup.bash /home/${USER_NAME}/setup.bash
+RUN bash script/add_setup.bash ${FROM_CUDA}
 RUN python3 python/remote_install.py
 RUN python3 python/make_install.py

@@ -10,7 +10,7 @@ then
     curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | apt-key add -
     apt-get update
     DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
-    apt-get install -y ros-noetic-desktop-full
+    apt-get install -y ros-noetic-ros-base
     source /opt/ros/noetic/setup.bash
 
     apt-get install -y python3-rosdep python3-rosinstall \
@@ -20,6 +20,9 @@ then
     adduser --disabled-password --gecos '' ${USER_NAME}
     adduser ${USER_NAME} sudo
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+    echo touch /root/.bashrc
+    echo 'source ~/setup.bash' >> /root/.bashrc
+    
 else
     echo "[buliding from ros-noetic-docker]"
 fi

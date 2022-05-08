@@ -6,3 +6,4 @@ scikit-learn
 matplotlib
 av
 pygame
+open3d

@@ -73,7 +73,7 @@ def print_pannel(lines: list[tuple[str, bool]]):
 if __name__ == "__main__": 
     os.system("clear")
     print_pannel([
-        ("ros-noetic-docker(bionic)", True), 
+        ("ros-noetic-docker(focal)", True), 
         ("", True), 
         ("", True),
         ("   - enter container:", False), 
@@ -81,7 +81,7 @@ if __name__ == "__main__":
         ("      2. run script/enter_container.bash", False), 
         ("", True), 
         ("   - stop container:", False), 
-        ("      1. open a new terminal", False)
+        ("      1. ctrl+d on this terminal", False)
     ])
       
 

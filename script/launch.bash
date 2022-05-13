@@ -15,7 +15,7 @@ xhost +local:root;
 python3 python/print_pannel.py
 docker run -it --rm --gpus all \
     --net host --privileged \
-    --name bionic \
+    --name focal \
     -v $HOME:/shared -e \
     DISPLAY=$DISPLAY -e \
     LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH \

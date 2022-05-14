@@ -10,3 +10,4 @@ xboxdrv
 nvidia-cuda-toolkit
 nvidia-driver-510
 mesa-utils
+ros-noetic-rosbridge-suite

@@ -20,3 +20,6 @@ COPY script/setup.bash /home/${USER_NAME}/setup.bash
 RUN bash script/add_setup.bash ${FROM_CUDA}
 RUN python3 python/remote_install.py
 RUN python3 python/make_install.py
+
+ENV NVIDIA_VISIBLE_DEVICES ${NVIDIA_VISIBLE_DEVICES:-all}
+ENV NVIDIA_DRIVER_CAPABILITIES ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics

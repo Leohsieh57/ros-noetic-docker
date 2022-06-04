@@ -22,7 +22,7 @@ docker run -it --rm --gpus all \
     -v /dev:/dev \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
     -v $HOME/ros-noetic-docker/catkin_ws:/home/user/catkin_ws:rw \
-    -v $HOME/ros-noetic-docker/data:/data:ro \
+    -v $HOME/ros-noetic-docker/data:/data:rw \
     -v $HOME/.ros-noetic-docker-bash-history:/home/user/.bash_history:rw \
     ros-noetic-docker /bin/bash > /dev/null
 
